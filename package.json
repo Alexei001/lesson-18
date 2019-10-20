@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint index.js",
+    "lint-fix": "./node_modules/.bin/eslint index.js --fix",
+    "start-server": "echo \"Server starting...\"",
+    "prestart-server": "echo \"prepare server for starting\"",
+    "poststart-server": "echo \"Server started!\"",
+    "boot": " npm run lint && npm run lint-fix && npm run start-server"
   },
   "repository": {
     "type": "git",
